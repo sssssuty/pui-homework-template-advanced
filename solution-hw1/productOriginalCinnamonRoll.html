@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bun Bun Bake Shop - Gallery</title>
-    <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/styleproductgallery.css">
+	<link rel="stylesheet" href="css/styleproductdetailpage.css">
 </head>
 <body>
 
@@ -16,10 +15,10 @@
 			</div>
 			<div class="nav-item-right">
 			  	<div id="nav-container-topbar">
-        			<a href="index.html" class="nav-container-topbar-item fonthero">Products</a>
-            		<a href="cart.html" class="nav-container-topbar-item fonthero">Cart</a>
+        			<a href="index.html" id="navproducts" class="nav-container-topbar-item fonthero">Products</a>
+            		<a href="cart.html" id="navcart" class="nav-container-topbar-item fonthero">Cart</a>
         		</div>
-            	<h1 class="fonthero">Original Cinnamon Roll</h1>
+            	<h1 class="fonthero">Our handmade cinnamon rolls</h1>
 			</div>
         </nav>
     </header>
@@ -33,22 +32,22 @@
 					<div class="fonthighlightlarge productname">Original Cinnamon Roll</div>
 					<form action="/">
 						<div class="formrow">
-							<label for="product0glazing" class="fontregular formleft">Glazing: </label>
+							<span for="product0glazing" class="fontregular formleft">Glazing: </span>
 							<select name="/" id="product0glazing" class="formright fontregular">
-								<option value="volvo">Keep Original</option>
-								<option value="saab">Sugar Milk</option>
-								<option value="opel">Vanilla Milk</option>
-								<option value="audi">Double Chocolate</option>
+								<option value="Keep Original">Keep Original</option>
+								<option value="Sugar Milk">Sugar Milk</option>
+								<option value="Vanilla Milk">Vanilla Milk</option>
+								<option value="Double Chocolate">Double Chocolate</option>
 							</select>
 						</div>
 						<div class="formrow">
-							<label for="packsize1" class="fontregular formleft">Pack Size:</label>
-							<div class="formright fontregular packsizesection">
-								<div class="packsizeoption">1</div>
-								<div class="packsizeoption">3</div>
-								<div class="packsizeoption">6</div>
-								<div class="packsizeoption">12</div>
-							</div>
+							<span for="packsize" class="fontregular formleft">Pack Size:</span>
+							<select name="/" id="product0glazing" class="formright fontregular">
+								<option value="1">1</option>
+								<option value="3">3</option>
+								<option value="6">6</option>
+								<option value="12">12</option>
+							</select>
 						</div>
 						<div class="formrow">
 							<a class="fonthighlightlarge formleft">$2.49</a>
