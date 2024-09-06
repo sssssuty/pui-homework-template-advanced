@@ -5,10 +5,10 @@ html{
   background-color: yellow;
 }
 .button{
-  border: 1px solid black
+  border: 1px solid black;
 }
 .button:hover{
-  background-color: yellow;
+  background-color: blue;
 }
 .packsizeoption:hover{
   background-color: yellow;
