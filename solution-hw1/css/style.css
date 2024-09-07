@@ -55,6 +55,10 @@ h2{
   font-size: 24px;
   font-weight: 400;
 }
+.fonthighlighthero{
+  font-size: 30px;
+  font-weight: 700;
+}
 .fonthighlightlarge{
   font-size: 20px;
   font-weight: 700;
@@ -127,11 +131,7 @@ select{
   margin-bottom: 60px;
   text-decoration: none;
   color:black;
-  padding: 10px;
 }
-/* .product-grid-container > div:hover{
-  background-color: yellow;
-} */
 .product-grid-container > div > a> img {
   width: 100%;
   border: 4px solid black;
