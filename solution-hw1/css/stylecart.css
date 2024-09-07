@@ -129,9 +129,6 @@ select{
   color:black;
   padding: 10px;
 }
-/* .product-grid-container > div:hover{
-  background-color: yellow;
-} */
 .product-grid-container > div > img {
   width: 100%;
   border: 4px solid black;
