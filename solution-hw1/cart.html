@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bun Bun Bake Shop - Cart</title>
-    <link rel="stylesheet" href="css/style.css">
-	  <link rel="stylesheet" href="css/stylecart.css">
-  </head>
-  <body>
+    <title>Bun Bun Bake Shop - Gallery</title>
+    <link rel="stylesheet" href="css/stylecart.css">
+</head>
+<body>
 
     <header>
-      <nav class="nav-container">
-        <div class="nav-item-left">
-            <img src="../assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo">
-        </div>
-        <div class="nav-item-right">
-            <div id="nav-container-topbar">
-                <a href="index.html" class="nav-container-topbar-item fonthero">Products</a>
-                  <a href="cart.html" class="nav-container-topbar-item fonthero">Cart</a>
-              </div>
-                <h1 class="fonthero">Our handmade cinnamon rolls</h1>
-        </div>
-      </nav>
-  </header>
-
-
-  <div>
-    <a href="productOriginalCinnamonRoll.html" class="product-grid-product">
-      <img src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
-      <div class="fonthighlightlarge productname">Original Cinnamon Roll</div>
-      <form action="/">
-        <div class="formrow">
-          <span class="fontregular formleft">Glazing: </span>
-          <select id="product0glazing" class="formright fontregular">
-            <option value="Keep Original">Keep Original</option>
-            <option value="Suger Milk">Sugar Milk</option>
-            <option value="Vanilla Milk">Vanilla Milk</option>
-            <option value="Double Chocolate">Double Chocolate</option>
-          </select>
-        </div>
-        <div class="formrow">
-          <span class="fontregular formleft">Pack Size:</span>
-          <div class="formright fontregular packsizesection">
-            <div class="packsizeoption">1</div>
-            <div class="packsizeoption">3</div>
-            <div class="packsizeoption">6</div>
-            <div class="packsizeoption">12</div>
+        <nav class="nav-container">
+			<div class="nav-item-left">
+			  	<img src="../assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo">
+			</div>
+			<div class="nav-item-right">
+			  	<div id="nav-container-topbar">
+        			<a href="index.html" id="navproducts" class="nav-container-topbar-item fonthero">Products</a>
+            		<a href="cart.html" id="navcart" class="nav-container-topbar-item fonthero">Cart</a>
+        		</div>
+            	<h1 class="fonthero">Our handmade cinnamon rolls</h1>
+			</div>
+        </nav>
+    </header>
+    
+    <!-- product content section -->
+    <main>
+        <section class="product-grid-container">
+        	<div class="product-grid-product">
+            <img src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll">
+            <h2 class="fonthighlightlarge productname">Original Cinnamon Roll</h2>
+            <div class="fontregular">Glazing: Keep Original</div>
+            <div class="fontregular">Pack Size: 1</div>
+            <div class="fonthighlightlarge">$2.49</div>
           </div>
-        </div>
-        <div class="formrow">
-          <span class="fonthighlightlarge formleft">$2.49</span>
-          <input type="submit" value="Add to Cart" class="fonthighlightsmall formright button">
-        </div>
-      </form>
-    </a>
-      </div>
+          <div class="product-grid-product">
+            <img src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate Cinnamon Roll">
+            <h2 class="fonthighlightlarge productname">Double Chocolate Cinnamon Roll</h2>
+            <div class="fontregular">Glazing: Sugar Milk</div>
+            <div class="fontregular">Pack Size: 6</div>
+            <div class="fonthighlightlarge">$27.45</div>
+          </div>
+          <div class="product-grid-product">
+            <img src="../assets/products/walnut-cinnamon-roll.jpg" alt="Walnut Cinnamon Roll">
+            <h2 class="fonthighlightlarge productname">Walnut Cinnamon Roll</h2>
+            <div class="fontregular">Glazing: Sugar Milk</div>
+            <div class="fontregular">Pack Size: 1</div>
+            <div class="fonthighlightlarge">$3.49</div>
+          </div>
+        </section>
 
-  </body>
+        <section class="checkoutcal">
+          <a class="fonthighlightlarge checkoutnum">Total: $33.43</a>
+          <input type="submit" value="Checkout" class="fonthighlightlarge button">
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Tingyu's cinnamon rolls - Bun Bun Bake Shop. All rights reserved.</p>
+    </footer>
+</body>
 </html>
