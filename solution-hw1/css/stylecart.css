@@ -75,42 +75,6 @@ h2{
 .button:hover{
   background-color: yellow;
 }
-.packsizeoption:hover{
-  background-color: yellow;
-}
-select{
-  border: 1px solid black;
-}
-.formleft{
-  width: 30%;
-}
-.formright{
-  width: 70%;
-}
-.formrow{
-  margin-top: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-select{
-  min-height: 30px;
-}
-.packsizesection{
-  margin:0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 20px;
-}
-.packsizeoption{
-  display: inline-block;
-  padding: 2px;
-  border: 1px solid black;
-  margin:0;
-  text-align:center;
-  background-color: white;
-}
 .product-grid-container {
   width: 80vw;
   display: grid;
@@ -140,7 +104,7 @@ select{
   color: black;
 }
 .checkoutcal{
-  width: 84vw;
+  width: 80vw;
   margin: auto;
   border-top: 3px solid black;
   text-align: center;
@@ -195,6 +159,9 @@ select{
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .product-grid-container {
+    width: 1100px;
+  }
+  .checkoutcal{
     width: 1100px;
   }
 }
