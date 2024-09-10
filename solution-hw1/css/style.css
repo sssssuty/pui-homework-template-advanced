@@ -133,6 +133,10 @@ select{
   margin-bottom: 60px;
   text-decoration: none;
   color:black;
+  padding: 10px;
+}
+.product-grid-container > div:hover{
+  background-color: yellow;
 }
 .product-grid-container > div > a> img {
   width: 100%;
