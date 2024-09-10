@@ -82,9 +82,9 @@ h2{
 .button:hover{
   background-color: yellow;
 }
-.packsizeoption:hover{
+/* .packsizeoption:active{
   background-color: yellow;
-}
+} */
 select{
   border: 1px solid black;
 }
@@ -112,11 +112,13 @@ select{
 }
 .packsizeoption{
   display: inline-block;
-  padding: 2px;
   border: 1px solid black;
   margin:0;
   text-align:center;
   background-color: white;
+  height: 30px;
+  align-items: center;
+  padding: 4px;
 }
 .product-grid-container {
   width: 80vw;
@@ -144,6 +146,17 @@ select{
 .product-grid-product{
   text-decoration: none;
   color: black;
+}
+input[type="radio"]{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+input[type="radio"]:checked + label{
+  background-color: yellow;
+}
+input[type="radio"]{
+  display: none;
 }
 
 
