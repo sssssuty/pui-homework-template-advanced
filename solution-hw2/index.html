@@ -16,7 +16,10 @@
             <div class="nav-item-right">
                 <div id="nav-container-topbar">
                     <a href="index.html" id="navproducts" class="nav-container-topbar-item fonthero">Products</a>
-                    <a href="cart.html" id="navcart" class="nav-container-topbar-item fonthero">Cart (<span id="cart-count">0</span>)</a>
+                    <a href="cart.html" id="navcart" class="nav-container-topbar-item fonthero">Cart<br>
+                        <span class="fontregular"><span id="cart-count">0</span> Item</span><br>
+                        <span class="fontregular" id="navtotalprice">&nbsp;</span>
+                    </a>
                 </div>
                 <h1 class="fonthero">Our handmade cinnamon rolls</h1>
             </div>
@@ -30,7 +33,7 @@
         </div>
     </header>
     
-    <!-- product content section -->
+    <!-- product gallery section -->
     <main>
         <section class="product-grid-container">
             <!-- Original Cinnamon Roll -->
@@ -43,13 +46,12 @@
                     <div class="formrow">
                         <span class="fontregular formleft">Glazing: </span>
                         <select id="product0glazing" class="formright fontregular" onchange="updatePrice(0)">
-                            <!-- Options will be populated by JavaScript -->
                         </select>
                     </div>
                     <div class="formrow">
                         <span class="fontregular formleft">Pack Size:</span>
                         <div class="formright fontregular packsizesection" onchange="updatePrice(0)">
-                            <input type="radio" name="packsize0" id="originalpacksize_1" value="1" checked>
+                            <input type="radio" name="packsize0" id="originalpacksize_1" value="1">
                             <label class="packsizeoption" for="originalpacksize_1">1</label>
                             <input type="radio" name="packsize0" id="originalpacksize_2" value="3">
                             <label class="packsizeoption" for="originalpacksize_2">3</label>
@@ -76,13 +78,12 @@
                     <div class="formrow">
                         <span class="fontregular formleft">Glazing: </span>
                         <select id="product1glazing" class="formright fontregular" onchange="updatePrice(1)">
-                            <!-- Options will be populated by JavaScript -->
                         </select>
                     </div>
                     <div class="formrow">
                         <span class="fontregular formleft">Pack Size:</span>
                         <div class="formright fontregular packsizesection" onchange="updatePrice(1)">
-                            <input type="radio" name="packsize1" id="applepacksize_1" value="1" checked>
+                            <input type="radio" name="packsize1" id="applepacksize_1" value="1">
                             <label class="packsizeoption" for="applepacksize_1">1</label>
                             <input type="radio" name="packsize1" id="applepacksize_2" value="3">
                             <label class="packsizeoption" for="applepacksize_2">3</label>
@@ -109,13 +110,12 @@
                     <div class="formrow">
                         <span class="fontregular formleft">Glazing: </span>
                         <select id="product2glazing" class="formright fontregular" onchange="updatePrice(2)">
-                            <!-- Options will be populated by JavaScript -->
                         </select>
                     </div>
                     <div class="formrow">
                         <span class="fontregular formleft">Pack Size:</span>
                         <div class="formright fontregular packsizesection" onchange="updatePrice(2)">
-                            <input type="radio" name="packsize2" id="raisinpacksize_1" value="1" checked>
+                            <input type="radio" name="packsize2" id="raisinpacksize_1" value="1">
                             <label class="packsizeoption" for="raisinpacksize_1">1</label>
                             <input type="radio" name="packsize2" id="raisinpacksize_2" value="3">
                             <label class="packsizeoption" for="raisinpacksize_2">3</label>
@@ -142,13 +142,12 @@
                     <div class="formrow">
                         <span class="fontregular formleft">Glazing: </span>
                         <select id="product3glazing" class="formright fontregular" onchange="updatePrice(3)">
-                            <!-- Options will be populated by JavaScript -->
                         </select>
                     </div>
                     <div class="formrow">
                         <span class="fontregular formleft">Pack Size:</span>
                         <div class="formright fontregular packsizesection" onchange="updatePrice(3)">
-                            <input type="radio" name="packsize3" id="walnutpacksize_1" value="1" checked>
+                            <input type="radio" name="packsize3" id="walnutpacksize_1" value="1">
                             <label class="packsizeoption" for="walnutpacksize_1">1</label>
                             <input type="radio" name="packsize3" id="walnutpacksize_2" value="3">
                             <label class="packsizeoption" for="walnutpacksize_2">3</label>
@@ -175,13 +174,12 @@
                     <div class="formrow">
                         <span class="fontregular formleft">Glazing: </span>
                         <select id="product4glazing" class="formright fontregular" onchange="updatePrice(4)">
-                            <!-- Options will be populated by JavaScript -->
                         </select>
                     </div>
                     <div class="formrow">
                         <span class="fontregular formleft">Pack Size:</span>
                         <div class="formright fontregular packsizesection" onchange="updatePrice(4)">
-                            <input type="radio" name="packsize4" id="chocopacksize_1" value="1" checked>
+                            <input type="radio" name="packsize4" id="chocopacksize_1" value="1">
                             <label class="packsizeoption" for="chocopacksize_1">1</label>
                             <input type="radio" name="packsize4" id="chocopacksize_2" value="3">
                             <label class="packsizeoption" for="chocopacksize_2">3</label>
@@ -208,13 +206,12 @@
                     <div class="formrow">
                         <span class="fontregular formleft">Glazing: </span>
                         <select id="product5glazing" class="formright fontregular" onchange="updatePrice(5)">
-                            <!-- Options will be populated by JavaScript -->
                         </select>
                     </div>
                     <div class="formrow">
                         <span class="fontregular formleft">Pack Size:</span>
                         <div class="formright fontregular packsizesection" onchange="updatePrice(5)">
-                            <input type="radio" name="packsize5" id="strawberrypacksize_1" value="1" checked>
+                            <input type="radio" name="packsize5" id="strawberrypacksize_1" value="1">
                             <label class="packsizeoption" for="strawberrypacksize_1">1</label>
                             <input type="radio" name="packsize5" id="strawberrypacksize_2" value="3">
                             <label class="packsizeoption" for="strawberrypacksize_2">3</label>

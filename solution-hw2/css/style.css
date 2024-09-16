@@ -164,10 +164,12 @@ input[type="radio"]{
 }
 #navpopup{
   position: absolute;
-  background-color: lightgray;
+  background-color: white;
+  border: 1px solid lightgray;
   padding: 20px;
-  left: 90vw;
+  right: 0.4vw;
   top: 90px;
+  width: 300px;
   display: none;
 }
 

@@ -1,26 +1,17 @@
-function myFunction() {
-	alert("update was clicked!");
-}
-// document.querySelector("#pricetesting").addEventListener('click', myFunction);
-
-
-// Roll class to store its type, base price, glazing, and packSize
 class Roll {
     constructor(type, basePrice, priceElementId) {
         this.type = type;
         this.basePrice = basePrice;
         this.glazing = "Keep Original";
         this.packSize = 1;
-        this.priceElementId = priceElementId;  // DOM element ID to update the price
+        this.priceElementId = priceElementId;
     }
 
-    // Method to compute the total price
     calculatePrice(glazingPrice, packMultiplier) {
         return (this.basePrice + glazingPrice) * packMultiplier;
     }
 }
 
-// Glazing and pack size options with price adaptations
 const glazingOptions = {
     "Keep Original": 0.00,
     "Sugar Milk": 0.00,
@@ -35,10 +26,8 @@ const packSizeOptions = {
     12: 12
 };
 
-// Array to hold the products in the cart
 let cart = [];
 
-// Array to store all Roll objects
 const rolls = [
     new Roll("Original Cinnamon Roll", 2.49, "originalrollprice"),
     new Roll("Apple Cinnamon Roll", 3.49, "applerollprice"),
@@ -48,7 +37,6 @@ const rolls = [
     new Roll("Strawberry Cinnamon Roll", 3.99, "strawberryrollprice")
 ];
 
-// Populate the glazing dropdowns
 function populateGlazingOptions() {
     for (let i = 0; i < rolls.length; i++) {
         let glazingSelect = document.getElementById(`product${i}glazing`);
@@ -61,7 +49,6 @@ function populateGlazingOptions() {
     }
 }
 
-// Update price based on glazing and pack size selections
 function updatePrice(productId) {
     let glazingSelect = document.getElementById(`product${productId}glazing`);
     let glazingPrice = parseFloat(glazingSelect.value);
@@ -74,7 +61,8 @@ function updatePrice(productId) {
     document.getElementById(rolls[productId].priceElementId).innerText = `$${newPrice.toFixed(2)}`;
 }
 
-// Add the selected roll to the cart
+let cartcountnum;
+let num;
 function addToCart(productId) {
     let glazingSelect = document.getElementById(`product${productId}glazing`);
     let selectedGlazing = glazingSelect.options[glazingSelect.selectedIndex].text;
@@ -83,9 +71,8 @@ function addToCart(productId) {
     let selectedPackSize = Array.from(packSizeRadios).find(radio => radio.checked).value;
 
     let priceText = document.getElementById(rolls[productId].priceElementId).innerText;
-    let totalPrice = parseFloat(priceText.substring(1));
 
-    // Add roll to the cart
+    let totalPrice = parseFloat(priceText.substring(1));
     cart.push({
         product: rolls[productId].type,
         glazing: selectedGlazing,
@@ -93,17 +80,33 @@ function addToCart(productId) {
         totalPrice: totalPrice
     });
 
-    // Update cart count and show popup
-    document.getElementById("cart-count").innerText = cart.length;
+    if (cartcountnum == undefined) {
+        num = 0;
+        cartcountnum = parseFloat(cart[num].packSize); 
+    } else {
+        cartcountnum = cartcountnum + parseFloat(cart[num].packSize);
+    }
+    document.getElementById("cart-count").innerText = cartcountnum;
+    num ++ ;
     showCartPopup(rolls[productId].type, selectedGlazing, selectedPackSize, totalPrice);
 }
 
-// Show the cart popup for 3 seconds
+let navtotalpricenum;
 function showCartPopup(productName, glazing, packSize, totalPrice) {
     document.getElementById("navpopupproductname").innerText = productName;
     document.getElementById("navpopupglazing").innerText = glazing;
     document.getElementById("navpopuppacknum").innerText = `Pack of ${packSize}`;
     document.getElementById("navpopuptotalprice").innerText = `$${totalPrice.toFixed(2)}`;
+
+    if (navtotalpricenum == undefined) {
+        navtotalpricenum = 0;
+        document.getElementById("navtotalprice").innerText = `$${totalPrice.toFixed(2)}`;
+        navtotalpricenum = parseFloat(totalPrice.toFixed(2));
+    } else {
+        navtotalpricenum = parseFloat(navtotalpricenum) + parseFloat(totalPrice.toFixed(2));
+        document.getElementById("navtotalprice").innerText = '$'+ navtotalpricenum.toFixed(2);
+    }
+    document.getElementById("navtotalprice").style.display = "default";
 
     let popup = document.getElementById("navpopup");
     popup.style.display = "block";
@@ -113,5 +116,4 @@ function showCartPopup(productName, glazing, packSize, totalPrice) {
     }, 3000);
 }
 
-// Initialize the page by populating glazing options
 populateGlazingOptions();
