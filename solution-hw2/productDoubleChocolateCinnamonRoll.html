@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bun Bun Bake Shop - Gallery</title>
+	<link rel="stylesheet" href="css/styleproductdetailpage.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+			<div class="nav-item-left">
+			  	<img src="../assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo">
+			</div>
+			<div class="nav-item-right">
+			  	<div id="nav-container-topbar">
+        			<a href="index.html" id="navproducts" class="nav-container-topbar-item fonthero">Products</a>
+            		<a href="cart.html" id="navcart" class="nav-container-topbar-item fonthero">Cart</a>
+        		</div>
+            	<h1 class="fonthero">Our handmade cinnamon rolls</h1>
+			</div>
+        </nav>
+    </header>
+    
+    <!-- product content section -->
+    <main>
+        <section class="product-grid-container">
+			<img src="../assets/products/double-chocolate-cinnamon-roll.jpg" alt="Double Chocolate Cinnamon Roll">
+			<h2 class="fonthighlightlarge productname">Double Chocolate Cinnamon Roll</h2>
+					<form action="/">
+						<div class="formrow">
+							<span class="fontregular formleft">Glazing: </span>
+							<select id="product0glazing" class="formright fontregular">
+								<option value="Keep Original">Keep Original</option>
+								<option value="Sugar Milk">Sugar Milk</option>
+								<option value="Vanilla Milk">Vanilla Milk</option>
+								<option value="Double Chocolate">Double Chocolate</option>
+							</select>
+						</div>
+						<div class="formrow">
+							<span class="fontregular formleft">Pack Size:</span>
+							<select id="packsize" class="formright fontregular">
+								<option value="1">1</option>
+								<option value="3">3</option>
+								<option value="6">6</option>
+								<option value="12">12</option>
+							</select>
+						</div>
+						<div class="formrow">
+							<a class="fonthighlightlarge formleft">$3.99</a>
+							<input type="submit" value="Add to Cart" class="fonthighlightsmall formright button">
+						</div>
+					</form>
+		</section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Tingyu's cinnamon rolls - Bun Bun Bake Shop. All rights reserved.</p>
+    </footer>
+</body>
+</html>
